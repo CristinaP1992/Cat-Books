@@ -15,6 +15,7 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<Welcome_Page text="Read. Plan. Enjoy" />} />
           <Route path="/discover" element={<BookList books={books} />} />
+          <Route path="/mybooks" element={<BookList books={books} />} />
         </Routes>
       </div>
     </BrowserRouter>

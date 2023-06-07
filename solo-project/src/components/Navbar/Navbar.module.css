@@ -2,6 +2,10 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: fixed;
+  max-width: 400px;
+  width: 100%;
+  background-color: blueviolet;
 }
 
 .menu {
