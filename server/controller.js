@@ -2,10 +2,7 @@ const Book = require('./model');
 
 const postBook = async (req, res) => {
   const book = new Book({
-    title: req.body.title,
-    authors: req.body.authors,
-    imageLink: req.body.imageLink,
-    description: req.body.description,
+    bookId: req.body.id,
     favorite: req.body.favorite,
     toread: req.body.toread,
     reading: req.body.reading,
@@ -22,7 +19,15 @@ const postBook = async (req, res) => {
 const getBooks = async (req, res) => {
   try {
     const book = await Book.find();
-    res.json(book);
+    res.json([
+      {
+        bookId: 'VAtfDwAAQBAJ',
+        favorite: true,
+        toread: false,
+        reading: false,
+        read: true,
+      },
+    ]);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

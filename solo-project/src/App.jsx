@@ -8,6 +8,7 @@ import { Navbar } from './components/Navbar/Navbar';
 
 export const App = () => {
   const books = useBooks();
+  console.log(books);
   return (
     <BrowserRouter>
       <div className="main">

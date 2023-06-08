@@ -2,10 +2,7 @@ const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
 
 const bookSchema = new Schema({
-  title: String,
-  authors: String,
-  imageLink: String,
-  description: String,
+  bookId: String,
   favorite: Boolean,
   toread: Boolean,
   reading: Boolean,
