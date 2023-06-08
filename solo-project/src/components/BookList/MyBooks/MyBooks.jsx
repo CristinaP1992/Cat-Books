@@ -1,7 +1,7 @@
 import { BookList } from '../BookList';
 import cl from './MyBooks.module.css';
 
-export const MyBooks = ({ books, toggleUserBook }) => {
+export const MyBooks = ({ books, updateUserBook }) => {
   return (
     <>
       <div className={cl.mybooks}>
@@ -19,7 +19,7 @@ export const MyBooks = ({ books, toggleUserBook }) => {
                 books={books.filter(
                   ({ userBook }) => userBook.status === 'toread'
                 )}
-                toggleUserBook={toggleUserBook}
+                updateUserBook={updateUserBook}
               />
             </div>
           </details>
@@ -35,7 +35,7 @@ export const MyBooks = ({ books, toggleUserBook }) => {
                 books={books.filter(
                   ({ userBook }) => userBook.status === 'reading'
                 )}
-                toggleUserBook={toggleUserBook}
+                updateUserBook={updateUserBook}
               />
             </div>
           </details>
@@ -51,7 +51,7 @@ export const MyBooks = ({ books, toggleUserBook }) => {
                 books={books.filter(
                   ({ userBook }) => userBook.status === 'read'
                 )}
-                toggleUserBook={toggleUserBook}
+                updateUserBook={updateUserBook}
               />
             </div>
           </details>

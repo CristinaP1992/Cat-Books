@@ -5,7 +5,7 @@ export const useBooks = () => {
   const [books, setBooks] = useState([]);
   const { getBooks, putUserBook } = useBooksApi();
 
-  const toggleUserBook = (bookId, status) => {
+  const updateUserBook = (bookId, status) => {
     let userBook = null;
     const updatedBooks = books.map((book) => {
       if (book.id === bookId) {
@@ -26,5 +26,5 @@ export const useBooks = () => {
     getBooks().then((fetchedBooks) => setBooks(fetchedBooks));
   }, []);
 
-  return { books, toggleUserBook };
+  return { books, updateUserBook };
 };

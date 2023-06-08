@@ -1,6 +1,6 @@
 import cl from './BookItem.module.css';
 
-export const BookItem = ({ book, toggleUserBook }) => {
+export const BookItem = ({ book, updateUserBook }) => {
   const { userBook } = book;
   return (
     <div className={cl.book}>
@@ -19,27 +19,27 @@ export const BookItem = ({ book, toggleUserBook }) => {
             className={cl.like}
             src="/liked.png"
             alt="liked"
-            onClick={() => toggleUserBook(book.id, 'favorite')}
+            onClick={() => updateUserBook(book.id, 'favorite')}
           />
         ) : (
           <img
             className={cl.like}
             src="/like.png"
             alt="like"
-            onClick={() => toggleUserBook(book.id, 'favorite')}
+            onClick={() => updateUserBook(book.id, 'favorite')}
           />
         )} */}
         {userBook.status === 'toread' ? (
           <div
             className={cl.wanttoread}
-            onClick={() => toggleUserBook(book.id, 'toread')}
+            onClick={() => updateUserBook(book.id, 'toread')}
           >
             Want to read
           </div>
         ) : (
           <div
             className={cl.read}
-            onClick={() => toggleUserBook(book.id, 'toread')}
+            onClick={() => updateUserBook(book.id, 'toread')}
           >
             Want to read
           </div>
@@ -47,14 +47,14 @@ export const BookItem = ({ book, toggleUserBook }) => {
         {userBook.status === 'reading' ? (
           <div
             className={cl.reading}
-            onClick={() => toggleUserBook(book.id, 'reading')}
+            onClick={() => updateUserBook(book.id, 'reading')}
           >
             Reading now
           </div>
         ) : (
           <div
             className={cl.notreading}
-            onClick={() => toggleUserBook(book.id, 'reading')}
+            onClick={() => updateUserBook(book.id, 'reading')}
           >
             Reading now
           </div>
@@ -62,14 +62,14 @@ export const BookItem = ({ book, toggleUserBook }) => {
         {userBook.status === 'read' ? (
           <div
             className={cl.completed}
-            onClick={() => toggleUserBook(book.id, 'read')}
+            onClick={() => updateUserBook(book.id, 'read')}
           >
             Read
           </div>
         ) : (
           <div
             className={cl.complete}
-            onClick={() => toggleUserBook(book.id, 'read')}
+            onClick={() => updateUserBook(book.id, 'read')}
           >
             Read
           </div>

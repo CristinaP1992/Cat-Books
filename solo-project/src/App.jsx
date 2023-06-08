@@ -8,7 +8,7 @@ import { Discover } from './components/Discover/Discover';
 import { MyBooks } from './components/BookList/MyBooks/MyBooks';
 
 export const App = () => {
-  const { books, toggleUserBook } = useBooks();
+  const { books, updateUserBook } = useBooks();
 
   return (
     <BrowserRouter>
@@ -18,11 +18,11 @@ export const App = () => {
           <Route path="/" element={<Welcome_Page text="Read. Plan. Enjoy" />} />
           <Route
             path="/discover"
-            element={<Discover books={books} toggleUserBook={toggleUserBook} />}
+            element={<Discover books={books} updateUserBook={updateUserBook} />}
           />
           <Route
             path="/mybooks"
-            element={<MyBooks books={books} toggleUserBook={toggleUserBook} />}
+            element={<MyBooks books={books} updateUserBook={updateUserBook} />}
           />
         </Routes>
       </div>
