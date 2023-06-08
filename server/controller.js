@@ -11,11 +11,11 @@ const putUserBook = async (req, res) => {
   };
 
   try {
-    const existBook = await Book.findOneAndUpdate({
-      bookId: req.params.id,
+    const existBook = await Book.findOneAndUpdate(
+      { bookId: req.params.id },
       userBook,
-      upsert: true,
-    });
+      { upsert: true }
+    );
     res.status(201).json(existBook);
   } catch (error) {
     res.status(400).json({ message: error.message });

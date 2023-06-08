@@ -19,11 +19,11 @@ export function useBooksApi() {
     });
   };
 
-  const putUserBook = async (book) => {
-    const response = await fetch(USER_BOOKS_API + '/books', {
+  const putUserBook = async (bookId, userBook) => {
+    const response = await fetch(USER_BOOKS_API + '/books/' + bookId, {
       method: 'PUT',
       mode: 'cors',
-      body: JSON.stringify(book),
+      body: JSON.stringify(userBook),
       headers: {
         'Content-Type': 'application/json',
       },
