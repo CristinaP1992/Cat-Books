@@ -14,7 +14,7 @@ export const BookItem = ({ book, toggleUserBook }) => {
             <img src="/cover.jpg" alt="alt-cover" />
           </div>
         )}
-        {userBook.favorite ? (
+        {/* {userBook.favorite ? (
           <img
             className={cl.like}
             src="/liked.png"
@@ -28,7 +28,7 @@ export const BookItem = ({ book, toggleUserBook }) => {
             alt="like"
             onClick={() => toggleUserBook(book.id, 'favorite')}
           />
-        )}
+        )} */}
         {userBook.toread ? (
           <div
             className={cl.wanttoread}

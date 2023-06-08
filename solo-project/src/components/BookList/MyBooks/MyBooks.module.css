@@ -1,0 +1,14 @@
+.mybooks {
+  text-align: center;
+  width: 400px;
+  background-color: aquamarine;
+  position: fixed;
+}
+
+.booklist {
+  margin-top: 80px;
+}
+
+.booklist h2 {
+  padding-left: 30px;
+}
