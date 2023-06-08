@@ -4,13 +4,20 @@
   align-items: center;
 }
 
-.image img {
-  width: 350px;
-  height: 300px;
+.moto {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
 }
 
-/* iframe {
-  width: 400px;
-  height: 500px;
-  border: none;
-} */
+.image {
+  padding: 0 10px;
+}
+
+.image img {
+  width: 100%;
+  display: block;
+}

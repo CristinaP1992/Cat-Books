@@ -16,7 +16,9 @@ export const MyBooks = ({ books, toggleUserBook }) => {
             </summary>
             <div className={cl.books}>
               <BookList
-                books={books.filter(({ userBook }) => userBook.toread === true)}
+                books={books.filter(
+                  ({ userBook }) => userBook.status === 'toread'
+                )}
                 toggleUserBook={toggleUserBook}
               />
             </div>
@@ -31,7 +33,7 @@ export const MyBooks = ({ books, toggleUserBook }) => {
             <div className={cl.books}>
               <BookList
                 books={books.filter(
-                  ({ userBook }) => userBook.reading === true
+                  ({ userBook }) => userBook.status === 'reading'
                 )}
                 toggleUserBook={toggleUserBook}
               />
@@ -46,7 +48,9 @@ export const MyBooks = ({ books, toggleUserBook }) => {
             </summary>
             <div className={cl.books}>
               <BookList
-                books={books.filter(({ userBook }) => userBook.read === true)}
+                books={books.filter(
+                  ({ userBook }) => userBook.status === 'read'
+                )}
                 toggleUserBook={toggleUserBook}
               />
             </div>

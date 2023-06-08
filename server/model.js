@@ -3,10 +3,11 @@ const { Schema, model } = mongoose;
 
 const bookSchema = new Schema({
   bookId: String,
-  favorite: Boolean,
-  toread: Boolean,
-  reading: Boolean,
-  read: Boolean,
+  status: {
+    type: String,
+    enum: ['initial', 'toread', 'reading', 'read'],
+    default: 'initial',
+  },
 });
 
 const Book = model('Book', bookSchema);

@@ -14,7 +14,7 @@ export function useBooksApi() {
     return googleBooksJson.items.map((googleBook) => {
       const userBook = userBooksJson.find(
         (userBook) => userBook.bookId === googleBook.id
-      ) ?? { favorite: false, toread: false, reading: false, read: false };
+      ) ?? { status: 'initial' };
       return { ...googleBook.volumeInfo, id: googleBook.id, userBook };
     });
   };

@@ -1,11 +1,10 @@
 .nav {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  overflow: hidden;
   position: fixed;
-  max-width: 400px;
+  bottom: 0;
   width: 100%;
-  background-color: blueviolet;
+  background-color: #3d8361;
 }
 
 .menu {
@@ -13,10 +12,12 @@
   font-size: 14px;
   cursor: pointer;
   text-decoration: none;
+  text-align: center;
+  align-self: center;
+  padding: 14px 16px;
 }
 
 .menu a.active {
   color: aliceblue;
-  background-color: blue;
   text-decoration: none;
 }

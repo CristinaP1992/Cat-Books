@@ -5,13 +5,13 @@ export const useBooks = () => {
   const [books, setBooks] = useState([]);
   const { getBooks, putUserBook } = useBooksApi();
 
-  const toggleUserBook = (bookId, property) => {
+  const toggleUserBook = (bookId, status) => {
     let userBook = null;
     const updatedBooks = books.map((book) => {
       if (book.id === bookId) {
         const updatedBook = {
           ...book,
-          userBook: { ...book.userBook, [property]: !book.userBook[property] },
+          userBook: { ...book.userBook, status },
         };
         userBook = updatedBook.userBook;
         return updatedBook;

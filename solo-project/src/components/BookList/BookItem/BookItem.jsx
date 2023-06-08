@@ -29,7 +29,7 @@ export const BookItem = ({ book, toggleUserBook }) => {
             onClick={() => toggleUserBook(book.id, 'favorite')}
           />
         )} */}
-        {userBook.toread ? (
+        {userBook.status === 'toread' ? (
           <div
             className={cl.wanttoread}
             onClick={() => toggleUserBook(book.id, 'toread')}
@@ -44,7 +44,7 @@ export const BookItem = ({ book, toggleUserBook }) => {
             Want to read
           </div>
         )}
-        {userBook.reading ? (
+        {userBook.status === 'reading' ? (
           <div
             className={cl.reading}
             onClick={() => toggleUserBook(book.id, 'reading')}
@@ -59,7 +59,7 @@ export const BookItem = ({ book, toggleUserBook }) => {
             Reading now
           </div>
         )}
-        {userBook.read ? (
+        {userBook.status === 'read' ? (
           <div
             className={cl.completed}
             onClick={() => toggleUserBook(book.id, 'read')}

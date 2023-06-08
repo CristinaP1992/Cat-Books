@@ -4,10 +4,7 @@ const putUserBook = async (req, res) => {
   const { body } = req;
   const userBook = {
     bookId: body.bookId,
-    favorite: body.favorite,
-    toread: body.toread,
-    reading: body.reading,
-    read: body.read,
+    status: body.status,
   };
 
   try {

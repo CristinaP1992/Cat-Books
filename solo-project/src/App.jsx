@@ -9,7 +9,7 @@ import { MyBooks } from './components/BookList/MyBooks/MyBooks';
 
 export const App = () => {
   const { books, toggleUserBook } = useBooks();
-  console.log(books);
+
   return (
     <BrowserRouter>
       <div className="main">
