@@ -1,16 +1,22 @@
 const Book = require('./model');
 
-const postBook = async (req, res) => {
-  const book = new Book({
-    bookId: req.body.id,
-    favorite: req.body.favorite,
-    toread: req.body.toread,
-    reading: req.body.reading,
-    read: req.body.read,
-  });
+const putUserBook = async (req, res) => {
+  const { body } = req;
+  const userBook = {
+    bookId: body.bookId,
+    favorite: body.favorite,
+    toread: body.toread,
+    reading: body.reading,
+    read: body.read,
+  };
+
   try {
-    const bookToPost = await book.save();
-    res.status(201).json(bookToPost);
+    const existBook = await Book.findOneAndUpdate({
+      bookId: req.params.id,
+      userBook,
+      upsert: true,
+    });
+    res.status(201).json(existBook);
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
@@ -19,18 +25,10 @@ const postBook = async (req, res) => {
 const getBooks = async (req, res) => {
   try {
     const book = await Book.find();
-    res.json([
-      {
-        bookId: 'VAtfDwAAQBAJ',
-        favorite: true,
-        toread: false,
-        reading: false,
-        read: true,
-      },
-    ]);
+    res.json(book);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 };
 
-module.exports = { getBooks, postBook };
+module.exports = { getBooks, putUserBook };
