@@ -1,0 +1,10 @@
+.books {
+  padding-left: 10px;
+  background-color: #f7a76c;
+  width: 100%;
+  position: fixed;
+}
+
+.booklist {
+  margin-top: 80px;
+}
