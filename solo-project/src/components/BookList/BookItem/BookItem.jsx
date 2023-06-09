@@ -36,7 +36,7 @@ export const BookItem = ({ book, updateUserBook }) => {
             </div>
           ) : (
             <div onClick={() => updateUserBook(book.id, 'toread')}>
-              <img src="./toread.png" alt="" />
+              <img src="./addbook.png" alt="" />
             </div>
           )}
           {userBook.status === 'reading' ? (
@@ -66,7 +66,7 @@ export const BookItem = ({ book, updateUserBook }) => {
               className={cl.complete}
               onClick={() => updateUserBook(book.id, 'read')}
             >
-              <img src="./read.png" alt="" />
+              <img src="./read3.png" alt="" />
             </div>
           )}
         </div>

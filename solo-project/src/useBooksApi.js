@@ -1,9 +1,8 @@
 export function useBooksApi() {
   const USER_BOOKS_API = 'http://localhost:8000';
 
-  const getBooks = async () => {
-    const response = await fetch(USER_BOOKS_API + '/books');
-
+  const getBooksByCategory = async (category = 'cats') => {
+    const response = await fetch(USER_BOOKS_API + '/books/' + category);
     const books = await response.json();
     return books;
   };
@@ -22,5 +21,5 @@ export function useBooksApi() {
     return responseBook;
   };
 
-  return { getBooks, putUserBook };
+  return { putUserBook, getBooksByCategory };
 }

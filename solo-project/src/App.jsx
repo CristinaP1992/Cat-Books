@@ -15,7 +15,7 @@ export const App = () => {
       <div className="main">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Welcome_Page text="Read. Plan. Enjoy" />} />
+          <Route path="/" element={<Welcome_Page />} />
           <Route
             path="/discover"
             element={<Discover books={books} updateUserBook={updateUserBook} />}

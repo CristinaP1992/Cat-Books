@@ -4,20 +4,28 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #3d8361;
+  background-color: #f7a76c;
+  justify-content: space-around;
+  padding: 20px 0px;
 }
 
 .menu {
-  color: black;
-  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  text-decoration: none;
   text-align: center;
   align-self: center;
-  padding: 14px 16px;
 }
 
-.menu a.active {
-  color: aliceblue;
-  text-decoration: none;
+.menu img {
+  width: 25px;
+}
+
+.menu .book {
+  width: 22px;
+}
+
+.menu .cat {
+  width: 28px;
 }

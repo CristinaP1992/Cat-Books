@@ -19,16 +19,15 @@ const putUserBook = async (req, res) => {
   }
 };
 
-const GOOGLE_BOOKS_API =
-  'https://www.googleapis.com/books/v1/volumes?q=cats&projection=lite';
+const GOOGLE_BOOKS_API = 'https://www.googleapis.com/books/v1/volumes';
 
-const getBooks = async (req, res) => {
+const getBooksByCategory = async (req, res) => {
   try {
-    const [response1, userBooksJson] = await Promise.all([
-      fetch(GOOGLE_BOOKS_API),
+    const [response, userBooksJson] = await Promise.all([
+      fetch(GOOGLE_BOOKS_API + '?projection=lite&q=' + req.params.category),
       Book.find(),
     ]);
-    const googleBooksJson = await response1.json();
+    const googleBooksJson = await response.json();
 
     const books = googleBooksJson.items.map((googleBook) => {
       const userBook = userBooksJson.find(
@@ -43,4 +42,4 @@ const getBooks = async (req, res) => {
   }
 };
 
-module.exports = { getBooks, putUserBook };
+module.exports = { putUserBook, getBooksByCategory };

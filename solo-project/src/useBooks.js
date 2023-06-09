@@ -3,7 +3,7 @@ import { useBooksApi } from './useBooksApi';
 
 export const useBooks = () => {
   const [books, setBooks] = useState([]);
-  const { getBooks, putUserBook } = useBooksApi();
+  const { getBooksByCategory, putUserBook } = useBooksApi();
 
   const updateUserBook = (bookId, status) => {
     let userBook = null;
@@ -23,7 +23,7 @@ export const useBooks = () => {
   };
 
   useEffect(() => {
-    getBooks().then((fetchedBooks) => setBooks(fetchedBooks));
+    getBooksByCategory().then((fetchedBooks) => setBooks(fetchedBooks));
   }, []);
 
   return { books, updateUserBook };
