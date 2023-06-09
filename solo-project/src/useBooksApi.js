@@ -1,22 +1,11 @@
 export function useBooksApi() {
-  const GOOGLE_BOOKS_API =
-    'https://www.googleapis.com/books/v1/volumes?q=cats&projection=lite';
-
   const USER_BOOKS_API = 'http://localhost:8000';
 
   const getBooks = async () => {
-    const [response1, response2] = await Promise.all([
-      fetch(GOOGLE_BOOKS_API),
-      fetch(USER_BOOKS_API + '/books'),
-    ]);
-    const googleBooksJson = await response1.json();
-    const userBooksJson = await response2.json();
-    return googleBooksJson.items.map((googleBook) => {
-      const userBook = userBooksJson.find(
-        (userBook) => userBook.bookId === googleBook.id
-      ) ?? { status: 'initial' };
-      return { ...googleBook.volumeInfo, id: googleBook.id, userBook };
-    });
+    const response = await fetch(USER_BOOKS_API + '/books');
+
+    const books = await response.json();
+    return books;
   };
 
   const putUserBook = async (bookId, userBook) => {

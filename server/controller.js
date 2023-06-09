@@ -19,10 +19,25 @@ const putUserBook = async (req, res) => {
   }
 };
 
+const GOOGLE_BOOKS_API =
+  'https://www.googleapis.com/books/v1/volumes?q=cats&projection=lite';
+
 const getBooks = async (req, res) => {
   try {
-    const book = await Book.find();
-    res.json(book);
+    const [response1, userBooksJson] = await Promise.all([
+      fetch(GOOGLE_BOOKS_API),
+      Book.find(),
+    ]);
+    const googleBooksJson = await response1.json();
+
+    const books = googleBooksJson.items.map((googleBook) => {
+      const userBook = userBooksJson.find(
+        (userBook) => userBook.bookId === googleBook.id
+      ) ?? { status: 'initial' };
+      return { ...googleBook.volumeInfo, id: googleBook.id, userBook };
+    });
+
+    res.json(books);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
