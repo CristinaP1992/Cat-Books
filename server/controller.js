@@ -2,8 +2,8 @@ const Book = require('./model');
 
 const putUserBook = async (req, res) => {
   const { body } = req;
-  const userBook = {
-    bookId: body.bookId,
+  const book = {
+    id: body.id,
     status: body.status,
     title: body.title,
     authors: body.authors,
@@ -13,14 +13,13 @@ const putUserBook = async (req, res) => {
   };
 
   try {
-    const existBook = await Book.findOneAndUpdate(
-      { bookId: req.params.id },
-      userBook,
-      { upsert: true }
-    );
+    const existBook = await Book.findOneAndUpdate({ id: req.params.id }, book, {
+      upsert: true,
+    });
     res.status(201).json(existBook);
   } catch (error) {
     res.status(400).json({ message: error.message });
+    console.log(error);
   }
 };
 

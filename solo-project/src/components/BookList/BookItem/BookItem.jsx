@@ -7,21 +7,6 @@ export const BookItem = ({ book, updateUserBook }) => {
         <div>
           <img className={cl.cover} src={book.thumbnail} alt="" />
         </div>
-        {/* {userBook.favorite ? (
-          <img
-            className={cl.like}
-            src="/liked.png"
-            alt="liked"
-            onClick={() => updateUserBook(book.id, 'favorite')}
-          />
-        ) : (
-          <img
-            className={cl.like}
-            src="/like.png"
-            alt="like"
-            onClick={() => updateUserBook(book.id, 'favorite')}
-          />
-        )} */}
         <div className={cl.icons2}>
           {book.status === 'toread' ? (
             <div onClick={() => updateUserBook(book.id, 'toread')}>

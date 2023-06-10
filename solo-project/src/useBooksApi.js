@@ -7,11 +7,11 @@ export function useBooksApi() {
     return books;
   };
 
-  const putUserBook = async (bookId, userBook) => {
+  const putUserBook = async (bookId, book) => {
     const response = await fetch(USER_BOOKS_API + '/books/' + bookId, {
       method: 'PUT',
       mode: 'cors',
-      body: JSON.stringify(userBook),
+      body: JSON.stringify(book),
       headers: {
         'Content-Type': 'application/json',
       },
