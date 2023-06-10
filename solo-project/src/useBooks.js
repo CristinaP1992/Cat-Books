@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useBooksApi } from './useBooksApi';
 
 export const useBooks = () => {
@@ -22,9 +22,9 @@ export const useBooks = () => {
     setBooks(updatedBooks);
   };
 
-  useEffect(() => {
-    getBooksByCategory().then((fetchedBooks) => setBooks(fetchedBooks));
-  }, []);
+  const fetchBooksByCategory = (query) => {
+    getBooksByCategory(query).then((fetchedBooks) => setBooks(fetchedBooks));
+  };
 
-  return { books, updateUserBook };
+  return { books, updateUserBook, fetchBooksByCategory };
 };
