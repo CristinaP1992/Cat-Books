@@ -5,6 +5,11 @@ const putUserBook = async (req, res) => {
   const userBook = {
     bookId: body.bookId,
     status: body.status,
+    title: body.title,
+    authors: body.authors,
+    description: body.description,
+    thumbnail: body.thumbnail,
+    infoLink: body.infoLink,
   };
 
   try {
@@ -30,10 +35,19 @@ const getBooksByCategory = async (req, res) => {
     const googleBooksJson = await response.json();
 
     const books = googleBooksJson.items.map((googleBook) => {
-      const userBook = userBooksJson.find(
-        (userBook) => userBook.bookId === googleBook.id
-      ) ?? { status: 'initial' };
-      return { ...googleBook.volumeInfo, id: googleBook.id, userBook };
+      // const userBook = userBooksJson.find(
+      //   (userBook) => userBook.bookId === googleBook.id
+      // ) ?? { status: 'initial' };
+      const { volumeInfo } = googleBook;
+      return {
+        title: volumeInfo.title,
+        authors: volumeInfo.authors,
+        description: volumeInfo.description,
+        thumbnail: volumeInfo.imageLinks?.thumbnail ?? 'cover.jpg',
+        infoLink: volumeInfo.infoLink,
+        status: 'initial',
+        id: googleBook.id,
+      };
     });
 
     res.json(books);

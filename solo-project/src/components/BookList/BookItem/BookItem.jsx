@@ -1,19 +1,12 @@
 import cl from './BookItem.module.css';
 
 export const BookItem = ({ book, updateUserBook }) => {
-  const { userBook } = book;
   return (
     <div className={cl.book}>
       <div className={cl.icons}>
-        {book.readingModes.image ? (
-          <div>
-            <img src={book.imageLinks.thumbnail} alt="" />
-          </div>
-        ) : (
-          <div>
-            <img className={cl.cover} src="/cover.jpg" alt="alt-cover" />
-          </div>
-        )}
+        <div>
+          <img className={cl.cover} src={book.thumbnail} alt="" />
+        </div>
         {/* {userBook.favorite ? (
           <img
             className={cl.like}
@@ -30,7 +23,7 @@ export const BookItem = ({ book, updateUserBook }) => {
           />
         )} */}
         <div className={cl.icons2}>
-          {userBook.status === 'toread' ? (
+          {book.status === 'toread' ? (
             <div onClick={() => updateUserBook(book.id, 'toread')}>
               <img src="./toread2.png" alt="" />
             </div>
@@ -39,7 +32,7 @@ export const BookItem = ({ book, updateUserBook }) => {
               <img src="./addbook.png" alt="" />
             </div>
           )}
-          {userBook.status === 'reading' ? (
+          {book.status === 'reading' ? (
             <div
               className={cl.reading}
               onClick={() => updateUserBook(book.id, 'reading')}
@@ -54,7 +47,7 @@ export const BookItem = ({ book, updateUserBook }) => {
               <img src="./reading2.png" alt="" />
             </div>
           )}
-          {userBook.status === 'read' ? (
+          {book.status === 'read' ? (
             <div
               className={cl.completed}
               onClick={() => updateUserBook(book.id, 'read')}

@@ -2,7 +2,12 @@ const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
 
 const bookSchema = new Schema({
-  bookId: String,
+  id: String,
+  title: String,
+  authors: String,
+  description: String,
+  thumbnail: String,
+  infoLink: String,
   status: {
     type: String,
     enum: ['initial', 'toread', 'reading', 'read'],
