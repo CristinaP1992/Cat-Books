@@ -6,6 +6,7 @@ import { Welcome_Page } from './components/Welcome_Page/Welcome_Page';
 import { Navbar } from './components/Navbar/Navbar';
 import { Discover } from './components/Discover/Discover';
 import { MyBooks } from './components/BookList/MyBooks/MyBooks';
+import { Search } from './components/Search/Search';
 
 export const App = () => {
   const { books, updateUserBook } = useBooks();
@@ -24,6 +25,7 @@ export const App = () => {
             path="/mybooks"
             element={<MyBooks books={books} updateUserBook={updateUserBook} />}
           />
+          <Route path="/search" element={<Search />} />
         </Routes>
       </div>
     </BrowserRouter>
