@@ -13,7 +13,7 @@ export const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Welcome_Page />} />
-          <Route path="/discover/:category?" element={<Discover />} />
+          <Route path="/discover/:category" element={<Discover />} />
           <Route path="/mybooks" element={<MyBooks />} />
           <Route path="/search" element={<Search />} />
         </Routes>

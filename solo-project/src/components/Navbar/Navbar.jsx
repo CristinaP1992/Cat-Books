@@ -5,7 +5,7 @@ export const Navbar = () => {
   return (
     <nav className={cl.nav}>
       <div className={cl.menu}>
-        <NavLink to="/discover">
+        <NavLink to="/discover/cats">
           <img className={cl.book} src="/book.svg" alt="" />
         </NavLink>
       </div>
