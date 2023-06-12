@@ -45,17 +45,14 @@ export const MyProfile = () => {
             <div className={cl.chart}>
               <h3>
                 <img src="/book.svg" alt="picture" /> Want to read (
-                {booksToRead.length}
-                {booksToRead.length <= 1 ? ' book' : ' books'} )
+                {booksToRead.length})
               </h3>
               <h3>
                 <img src="/book2.svg" alt="picture" /> Reading now (
-                {booksReading.length}
-                {booksReading.length <= 1 ? ' book' : ' books'} )
+                {booksReading.length})
               </h3>
               <h3>
-                <img src="/book3.svg" alt="picture" /> Read ({booksRead.length}
-                {booksRead.length <= 1 ? ' book' : ' books'} )
+                <img src="/book3.svg" alt="picture" /> Read ({booksRead.length})
               </h3>
             </div>
           </div>

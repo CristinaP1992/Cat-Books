@@ -12,7 +12,7 @@ export const useBooks = () => {
       if (book.id === bookId) {
         updatedBook = {
           ...book,
-          status,
+          status: book.status === status ? 'initial' : status,
         };
         return updatedBook;
       }
