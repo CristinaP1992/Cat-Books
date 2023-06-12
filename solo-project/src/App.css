@@ -1,8 +1,8 @@
-.main {
+main {
   display: flex;
   flex-direction: column;
 }
 
-.main::-webkit-scrollbar {
+main::-webkit-scrollbar {
   display: none;
 }

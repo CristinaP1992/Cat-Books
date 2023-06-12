@@ -31,5 +31,15 @@ export const useBooks = () => {
     setBooks(await getUserBooks());
   };
 
-  return { books, updateUserBook, fetchUserBooks, fetchBooksByCategory };
+  const selectBooksByStatus = (status) => {
+    return books.filter((book) => book.status === status);
+  };
+
+  return {
+    books,
+    updateUserBook,
+    fetchUserBooks,
+    fetchBooksByCategory,
+    selectBooksByStatus,
+  };
 };

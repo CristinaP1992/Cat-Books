@@ -10,7 +10,7 @@ import { MyProfile } from './components/MyProfile/MyProfile';
 export const App = () => {
   return (
     <BrowserRouter>
-      <div className="main">
+      <main>
         <Routes>
           <Route path="/" element={<Welcome_Page />} />
           <Route path="/discover/:category" element={<Discover />} />
@@ -19,7 +19,7 @@ export const App = () => {
           <Route path="/myprofile" element={<MyProfile />} />
         </Routes>
         <Navbar />
-      </div>
+      </main>
     </BrowserRouter>
   );
 };

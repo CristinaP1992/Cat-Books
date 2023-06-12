@@ -5,11 +5,11 @@ import cl from './MyBooks.module.css';
 import { useBooks } from '../../../useBooks';
 
 export const MyBooks = () => {
-  const { books, updateUserBook, fetchUserBooks } = useBooks();
+  const { updateUserBook, fetchUserBooks, selectBooksByStatus } = useBooks();
 
-  const booksToRead = books.filter((book) => book.status === 'toread');
-  const booksReading = books.filter((book) => book.status === 'reading');
-  const booksRead = books.filter((book) => book.status === 'read');
+  const booksToRead = selectBooksByStatus('toread');
+  const booksReading = selectBooksByStatus('reading');
+  const booksRead = selectBooksByStatus('read');
 
   useEffect(() => {
     fetchUserBooks();
@@ -24,8 +24,7 @@ export const MyBooks = () => {
             <summary>
               {' '}
               <div className={cl.books_button}>
-                <h2>Want to read </h2>{' '}
-                <span style={{ color: 'green' }}>{booksToRead.length}</span>
+                <h2>Want to read </h2> <span>{booksToRead.length}</span>
               </div>
             </summary>
             <div>
@@ -39,7 +38,7 @@ export const MyBooks = () => {
               {' '}
               <div className={cl.books_button}>
                 <h2>Reading now</h2>
-                <span style={{ color: 'green' }}>{booksReading.length}</span>
+                <span>{booksReading.length}</span>
               </div>
             </summary>
             <div>
@@ -53,7 +52,7 @@ export const MyBooks = () => {
               {' '}
               <div className={cl.books_button}>
                 <h2>Read</h2>
-                <span style={{ color: 'green' }}>{booksRead.length}</span>
+                <span>{booksRead.length}</span>
               </div>
             </summary>
             <div>

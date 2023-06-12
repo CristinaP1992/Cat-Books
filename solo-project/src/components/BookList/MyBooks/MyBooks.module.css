@@ -32,6 +32,7 @@ details summary::-webkit-details-marker {
   right: 16px;
   font-size: 20px;
   font-weight: 600;
+  color: darkgreen;
   background-color: #dff5ce;
   width: 30px;
   border-radius: 50%;
