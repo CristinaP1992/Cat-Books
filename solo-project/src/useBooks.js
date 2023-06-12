@@ -3,7 +3,7 @@ import { useBooksApi } from './useBooksApi';
 
 export const useBooks = () => {
   const [books, setBooks] = useState([]);
-  const { getBooksByCategory, putUserBook } = useBooksApi();
+  const { getUserBooks, getBooksByCategory, putUserBook } = useBooksApi();
 
   const updateUserBook = (bookId, status) => {
     let updatedBook;
@@ -23,9 +23,13 @@ export const useBooks = () => {
     setBooks(updatedBooks);
   };
 
-  const fetchBooksByCategory = (query) => {
-    getBooksByCategory(query).then((fetchedBooks) => setBooks(fetchedBooks));
+  const fetchBooksByCategory = async (query) => {
+    setBooks(await getBooksByCategory(query));
   };
 
-  return { books, updateUserBook, fetchBooksByCategory };
+  const fetchUserBooks = async () => {
+    setBooks(await getUserBooks());
+  };
+
+  return { books, updateUserBook, fetchUserBooks, fetchBooksByCategory };
 };

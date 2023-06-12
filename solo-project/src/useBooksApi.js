@@ -7,6 +7,12 @@ export function useBooksApi() {
     return books;
   };
 
+  const getUserBooks = async () => {
+    const response = await fetch(USER_BOOKS_API + '/my-books/');
+    const books = await response.json();
+    return books;
+  };
+
   const putUserBook = async (bookId, book) => {
     const response = await fetch(USER_BOOKS_API + '/books/' + bookId, {
       method: 'PUT',
@@ -21,5 +27,5 @@ export function useBooksApi() {
     return responseBook;
   };
 
-  return { putUserBook, getBooksByCategory };
+  return { getUserBooks, getBooksByCategory, putUserBook };
 }

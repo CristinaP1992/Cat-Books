@@ -1,8 +1,16 @@
+import { useEffect } from 'react';
 import { BookList } from '../BookList';
 import { Title } from '../../Title';
 import cl from './MyBooks.module.css';
+import { useBooks } from '../../../useBooks';
 
-export const MyBooks = ({ books, updateUserBook }) => {
+export const MyBooks = () => {
+  const { books, updateUserBook, fetchUserBooks } = useBooks();
+
+  useEffect(() => {
+    fetchUserBooks();
+  }, []);
+
   return (
     <>
       <Title title="MyBooks" />
@@ -17,9 +25,7 @@ export const MyBooks = ({ books, updateUserBook }) => {
             </summary>
             <div>
               <BookList
-                books={books.filter(
-                  ({ userBook }) => userBook.status === 'toread'
-                )}
+                books={books.filter((book) => book.status === 'toread')}
                 updateUserBook={updateUserBook}
               />
             </div>
@@ -35,9 +41,7 @@ export const MyBooks = ({ books, updateUserBook }) => {
             </summary>
             <div>
               <BookList
-                books={books.filter(
-                  ({ userBook }) => userBook.status === 'reading'
-                )}
+                books={books.filter((book) => book.status === 'reading')}
                 updateUserBook={updateUserBook}
               />
             </div>
@@ -53,9 +57,7 @@ export const MyBooks = ({ books, updateUserBook }) => {
             </summary>
             <div>
               <BookList
-                books={books.filter(
-                  ({ userBook }) => userBook.status === 'read'
-                )}
+                books={books.filter((book) => book.status === 'read')}
                 updateUserBook={updateUserBook}
               />
             </div>

@@ -55,4 +55,13 @@ const getBooksByCategory = async (req, res) => {
   }
 };
 
-module.exports = { putUserBook, getBooksByCategory };
+const getUserBooks = async (req, res) => {
+  try {
+    const myBooks = await Book.find();
+    res.json(myBooks);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+module.exports = { putUserBook, getBooksByCategory, getUserBooks };
