@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
+const mongoURL = require('./config');
 
 const bookSchema = new Schema({
   id: String,
@@ -17,9 +18,7 @@ const bookSchema = new Schema({
 
 const Book = model('Book', bookSchema);
 
-mongoose.connect(
-  'mongodb+srv://chrisciolac:Etmw4tP7YL0EZEAU@cluster0.4krey03.mongodb.net/Cat-Books?retryWrites=true&w=majority'
-);
+mongoose.connect(mongoURL);
 const database = mongoose.connection;
 
 database.on('error', (error) => {

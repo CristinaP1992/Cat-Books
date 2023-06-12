@@ -42,7 +42,7 @@ const getBooksByCategory = async (req, res) => {
         title: volumeInfo.title,
         authors: volumeInfo.authors,
         description: volumeInfo.description,
-        thumbnail: volumeInfo.imageLinks?.thumbnail ?? 'cover.jpg',
+        thumbnail: volumeInfo.imageLinks?.thumbnail ?? '/cover.jpg',
         infoLink: volumeInfo.infoLink,
         status: 'initial',
         id: googleBook.id,

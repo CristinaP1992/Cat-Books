@@ -2,15 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 71px;
-}
-
-.header {
-  background-color: #f7a76c;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  text-align: center;
+  padding-top: 30px;
 }
 
 form {
@@ -18,7 +10,7 @@ form {
   display: flex;
   flex-direction: row;
   border: 2px solid #f7a76c;
-  margin-top: 50px;
+  margin-bottom: 40px;
   border-radius: 5px;
 }
 

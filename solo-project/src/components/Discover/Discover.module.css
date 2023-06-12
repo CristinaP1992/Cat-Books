@@ -1,13 +1,6 @@
-.books {
-  padding-left: 10px;
-  background-color: #f7a76c;
-  width: 100%;
-  position: fixed;
-  text-align: center;
-}
-
 .category {
-  margin-top: 150px;
+  margin-top: 10px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-evenly;
 }
@@ -22,20 +15,10 @@
   font-weight: 500;
   color: #f7a76c;
   padding: 10px;
+  margin: 2px;
 }
 
-.item a.active {
-  border: 1px solid #f7a76c;
-  text-decoration: none;
-  border-radius: 20px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 500;
+.item.active {
   color: black;
   background-color: #f7a76c;
-  padding: 10px;
-}
-
-.booklist {
-  margin-top: 80px;
 }

@@ -10,11 +10,11 @@ export const BookItem = ({ book, updateUserBook }) => {
         <div className={cl.icons2}>
           {book.status === 'toread' ? (
             <div onClick={() => updateUserBook(book.id, 'toread')}>
-              <img src="./toread2.png" alt="" />
+              <img src="/toread2.png" alt="" />
             </div>
           ) : (
             <div onClick={() => updateUserBook(book.id, 'toread')}>
-              <img src="./addbook.png" alt="" />
+              <img src="/addbook.png" alt="" />
             </div>
           )}
           {book.status === 'reading' ? (
@@ -22,14 +22,14 @@ export const BookItem = ({ book, updateUserBook }) => {
               className={cl.reading}
               onClick={() => updateUserBook(book.id, 'reading')}
             >
-              <img src="./reading-now2.png" alt="" />
+              <img src="/reading-now2.png" alt="" />
             </div>
           ) : (
             <div
               className={cl.notreading}
               onClick={() => updateUserBook(book.id, 'reading')}
             >
-              <img src="./reading2.png" alt="" />
+              <img src="/reading2.png" alt="" />
             </div>
           )}
           {book.status === 'read' ? (
@@ -37,14 +37,14 @@ export const BookItem = ({ book, updateUserBook }) => {
               className={cl.completed}
               onClick={() => updateUserBook(book.id, 'read')}
             >
-              <img src="./read2.png" alt="" />
+              <img src="/read2.png" alt="" />
             </div>
           ) : (
             <div
               className={cl.complete}
               onClick={() => updateUserBook(book.id, 'read')}
             >
-              <img src="./read3.png" alt="" />
+              <img src="/read3.png" alt="" />
             </div>
           )}
         </div>
