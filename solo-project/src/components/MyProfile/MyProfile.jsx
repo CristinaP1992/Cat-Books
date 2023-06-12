@@ -1,5 +1,6 @@
 import { Title } from '../Title';
 import cl from './MyProfile.module.css';
+import { PieChart } from 'react-minimal-pie-chart';
 
 export const MyProfile = () => {
   return (
@@ -20,7 +21,25 @@ export const MyProfile = () => {
         <div className={cl.progress}>
           <h2>My Progress</h2>
           <div className={cl.circle_chart}>
-            <p className={cl.date}>2023</p>
+            <PieChart
+              data={[
+                { value: 15, color: '#C13C37' },
+                { value: 5, color: '#6A2135' },
+                { value: 20, color: '#E38627' },
+              ]}
+            />
+            <div className={cl.chart}>
+              <h3>
+                <img src="/book.svg" alt="" /> Want to read
+              </h3>
+              <h3>
+                <img src="/book2.svg" alt="" /> Reading now
+              </h3>
+              <h3>
+                <img src="/book3.svg" alt="" /> Read
+              </h3>
+              {/* <p className={cl.date}>2023</p> */}
+            </div>
           </div>
         </div>
       </div>

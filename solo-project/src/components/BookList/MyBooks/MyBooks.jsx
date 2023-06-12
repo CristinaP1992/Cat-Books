@@ -24,7 +24,7 @@ export const MyBooks = () => {
             <summary>
               {' '}
               <div className={cl.books_button}>
-                <h2>Want to reads </h2>{' '}
+                <h2>Want to read </h2>{' '}
                 <span style={{ color: 'green' }}>{booksToRead.length}</span>
               </div>
             </summary>

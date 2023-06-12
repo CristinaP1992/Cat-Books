@@ -10,6 +10,10 @@
   z-index: 1;
 }
 
+.navbar_placeholder {
+  height: 100px;
+}
+
 .menu {
   display: flex;
   align-items: center;

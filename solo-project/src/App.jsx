@@ -11,7 +11,6 @@ export const App = () => {
   return (
     <BrowserRouter>
       <div className="main">
-        <Navbar />
         <Routes>
           <Route path="/" element={<Welcome_Page />} />
           <Route path="/discover/:category" element={<Discover />} />
@@ -19,6 +18,7 @@ export const App = () => {
           <Route path="/search" element={<Search />} />
           <Route path="/myprofile" element={<MyProfile />} />
         </Routes>
+        <Navbar />
       </div>
     </BrowserRouter>
   );
