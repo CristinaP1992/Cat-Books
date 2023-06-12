@@ -3,6 +3,37 @@
   background-color: #f7a76c;
   width: 100%;
   position: fixed;
+  text-align: center;
+}
+
+.category {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.item {
+  width: 100px;
+  border: 1px solid #f7a76c;
+  text-decoration: none;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: #f7a76c;
+  padding: 10px;
+}
+
+.item a.active {
+  border: 1px solid #f7a76c;
+  text-decoration: none;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  background-color: #f7a76c;
+  padding: 10px;
 }
 
 .booklist {
