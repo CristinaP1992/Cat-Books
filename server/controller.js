@@ -34,9 +34,9 @@ const getBooksByCategory = async (req, res) => {
     const googleBooksJson = await response.json();
 
     const books = googleBooksJson.items.map((googleBook) => {
-      // const userBook = userBooksJson.find(
-      //   (userBook) => userBook.bookId === googleBook.id
-      // ) ?? { status: 'initial' };
+      const userBook = userBooksJson.find(
+        (userBook) => userBook.id === googleBook.id
+      );
       const { volumeInfo } = googleBook;
       return {
         title: volumeInfo.title,
@@ -44,7 +44,7 @@ const getBooksByCategory = async (req, res) => {
         description: volumeInfo.description,
         thumbnail: volumeInfo.imageLinks?.thumbnail ?? '/cover.jpg',
         infoLink: volumeInfo.infoLink,
-        status: 'initial',
+        status: userBook?.status ?? 'initial',
         id: googleBook.id,
       };
     });
