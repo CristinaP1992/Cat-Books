@@ -5,6 +5,7 @@ import { Navbar } from './components/Navbar/Navbar';
 import { Discover } from './components/Discover/Discover';
 import { MyBooks } from './components/BookList/MyBooks/MyBooks';
 import { Search } from './components/Search/Search';
+import { MyProfile } from './components/MyProfile/MyProfile';
 
 export const App = () => {
   return (
@@ -16,6 +17,7 @@ export const App = () => {
           <Route path="/discover/:category" element={<Discover />} />
           <Route path="/mybooks" element={<MyBooks />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/myprofile" element={<MyProfile />} />
         </Routes>
       </div>
     </BrowserRouter>

@@ -20,7 +20,7 @@ export const Navbar = () => {
         </NavLink>
       </div>
       <div className={cl.menu}>
-        <NavLink to="/profile">
+        <NavLink to="/myprofile">
           <img className={cl.cat} src="/cat.svg" alt="" />
         </NavLink>
       </div>

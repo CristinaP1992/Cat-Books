@@ -24,6 +24,7 @@ details summary::-webkit-details-marker {
   border-radius: 10px;
   margin: 0 auto;
   margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .books_button span {
@@ -31,4 +32,10 @@ details summary::-webkit-details-marker {
   right: 16px;
   font-size: 20px;
   font-weight: 600;
+  background-color: #dff5ce;
+  width: 30px;
+  border-radius: 50%;
+  align-self: center;
+  text-align: center;
+  padding: 2px;
 }

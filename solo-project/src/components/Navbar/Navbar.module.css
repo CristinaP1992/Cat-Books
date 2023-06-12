@@ -7,6 +7,7 @@
   background-color: #f7a76c;
   justify-content: space-around;
   padding: 20px 0px;
+  z-index: 1;
 }
 
 .menu {

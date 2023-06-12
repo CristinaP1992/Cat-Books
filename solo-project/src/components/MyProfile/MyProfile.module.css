@@ -1,0 +1,59 @@
+.profile_info .background {
+  background-color: antiquewhite;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: -1;
+}
+
+.avatar {
+  width: 200px;
+  margin: 20px 10px;
+  background-color: white;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.avatar img {
+  width: 100%;
+}
+
+.avatar h2 {
+  text-align: center;
+  margin: 0;
+}
+
+.info h3 {
+  font-weight: normal;
+}
+
+.progress {
+  margin-left: 10px;
+}
+
+.circle_chart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 2rem;
+  border-radius: 100%;
+}
+
+.date {
+  background: #f7a76c;
+  position: absolute;
+  text-align: center;
+  font-size: 28px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  border-radius: 50%;
+  padding: 15% 0 0;
+}
