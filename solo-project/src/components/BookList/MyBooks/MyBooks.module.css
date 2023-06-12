@@ -12,7 +12,8 @@ details summary::-webkit-details-marker {
   display: none;
 }
 
-.books {
+.books_button {
+  position: relative;
   width: 300px;
   height: 50px;
   cursor: pointer;
@@ -23,4 +24,11 @@ details summary::-webkit-details-marker {
   border-radius: 10px;
   margin: 0 auto;
   margin-top: 20px;
+}
+
+.books_button span {
+  position: absolute;
+  right: 16px;
+  font-size: 20px;
+  font-weight: 600;
 }

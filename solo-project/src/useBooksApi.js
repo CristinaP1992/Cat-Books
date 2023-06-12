@@ -8,7 +8,7 @@ export function useBooksApi() {
   };
 
   const getUserBooks = async () => {
-    const response = await fetch(USER_BOOKS_API + '/my-books/');
+    const response = await fetch(USER_BOOKS_API + '/user-books/');
     const books = await response.json();
     return books;
   };

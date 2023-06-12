@@ -8,6 +8,6 @@ const {
 
 router.get('/books/:category', getBooksByCategory);
 router.put('/books/:id', putUserBook);
-router.get('/my-books', getUserBooks);
+router.get('/user-books', getUserBooks);
 
 module.exports = router;
