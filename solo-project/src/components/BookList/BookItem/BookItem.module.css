@@ -1,6 +1,4 @@
 .book {
-  display: flex;
-  align-items: center;
   margin-bottom: 15px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -15,8 +13,8 @@ h3 {
 .max_lines {
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* number of lines to show */
-  line-clamp: 2;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  line-clamp: 3;
   word-break: break-word;
   -webkit-box-orient: vertical;
   line-height: 1.8em;
@@ -31,17 +29,37 @@ h3 {
   width: 128px;
 }
 
-.icons2 {
+.buttons {
+  width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  padding-bottom: 15px;
 }
 
-.icons2 img {
-  width: 30px;
-  background-color: transparent;
+.button {
+  width: 30%;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background-color: blanchedalmond;
+  border: none;
+  border-radius: 10px;
 }
 
-.like {
-  width: 20px;
-  height: 20px;
+.button img {
+  width: 16px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.button.active {
+  background-color: #f7a76c;
+}
+
+.top {
+  display: flex;
+  align-items: center;
 }

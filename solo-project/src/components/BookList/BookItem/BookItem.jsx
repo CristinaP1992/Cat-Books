@@ -1,58 +1,40 @@
+import cn from 'classnames';
 import cl from './BookItem.module.css';
 
 export const BookItem = ({ book, updateUserBook }) => {
+  const getOnClick = (status) => {
+    return () => updateUserBook(book.id, status);
+  };
+
+  const getActive = (status) => {
+    return cn(cl.button, { [cl.active]: book.status === status });
+  };
+
   return (
     <div className={cl.book}>
-      <div className={cl.icons}>
-        <div>
+      <div className={cl.top}>
+        <div className={cl.icons}>
           <img className={cl.cover} src={book.thumbnail} alt="" />
         </div>
-        <div className={cl.icons2}>
-          {book.status === 'toread' ? (
-            <div onClick={() => updateUserBook(book.id, 'toread')}>
-              <img src="/toread2.png" alt="" />
-            </div>
-          ) : (
-            <div onClick={() => updateUserBook(book.id, 'toread')}>
-              <img src="/addbook.png" alt="" />
-            </div>
-          )}
-          {book.status === 'reading' ? (
-            <div
-              className={cl.reading}
-              onClick={() => updateUserBook(book.id, 'reading')}
-            >
-              <img src="/reading-now2.png" alt="" />
-            </div>
-          ) : (
-            <div
-              className={cl.notreading}
-              onClick={() => updateUserBook(book.id, 'reading')}
-            >
-              <img src="/reading2.png" alt="" />
-            </div>
-          )}
-          {book.status === 'read' ? (
-            <div
-              className={cl.completed}
-              onClick={() => updateUserBook(book.id, 'read')}
-            >
-              <img src="/read2.png" alt="" />
-            </div>
-          ) : (
-            <div
-              className={cl.complete}
-              onClick={() => updateUserBook(book.id, 'read')}
-            >
-              <img src="/read3.png" alt="" />
-            </div>
-          )}
+        <div className={cl.description}>
+          <h3>{book.title}</h3>
+          <h3 style={{ fontWeight: 'normal' }}>{book.authors}</h3>
+          <p className={cl.max_lines}>{book.description}</p>
         </div>
       </div>
-      <div className={cl.description}>
-        <h3>{book.title}</h3>
-        <h3 style={{ fontWeight: 'normal' }}>{book.authors}</h3>
-        <p className={cl.max_lines}>{book.description}</p>
+      <div className={cl.buttons}>
+        <button className={getActive('toread')} onClick={getOnClick('toread')}>
+          <img src="/plus.svg" alt="" /> To read
+        </button>
+        <button
+          className={getActive('reading')}
+          onClick={getOnClick('reading')}
+        >
+          <img src="/eye.svg" alt="" /> Reading
+        </button>
+        <button className={getActive('read')} onClick={getOnClick('read')}>
+          <img src="/check.svg" alt="" /> Read
+        </button>
       </div>
     </div>
   );
