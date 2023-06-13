@@ -1,6 +1,6 @@
 const Book = require('./model');
 
-const putUserBook = async (req, res) => {
+const createOrUpdateUserBook = async (req, res) => {
   const { body } = req;
   const book = {
     id: body.id,
@@ -64,4 +64,4 @@ const getUserBooks = async (req, res) => {
   }
 };
 
-module.exports = { putUserBook, getBooksByCategory, getUserBooks };
+module.exports = { createOrUpdateUserBook, getBooksByCategory, getUserBooks };
