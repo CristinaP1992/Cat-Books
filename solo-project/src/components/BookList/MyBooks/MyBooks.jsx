@@ -17,7 +17,7 @@ export const MyBooks = () => {
 
   return (
     <>
-      <Title title="MyBooks" />
+      <Title title="My Bookshelf" />
       <div className={cl.list}>
         <div className={cl.booklist}>
           <details>

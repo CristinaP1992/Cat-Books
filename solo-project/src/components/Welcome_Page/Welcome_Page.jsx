@@ -15,7 +15,7 @@ export const Welcome_Page = () => {
       </div>
       <div className={cl.greeting}>
         <h2>
-          Welcome back, <span style={{ color: '#FF8FB1' }}>Cristina</span>{' '}
+          Welcome back, <span style={{ color: '#FF8FB1' }}>Kissa</span>{' '}
         </h2>
       </div>
     </div>

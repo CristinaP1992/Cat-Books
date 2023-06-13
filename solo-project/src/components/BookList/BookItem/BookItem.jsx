@@ -17,8 +17,8 @@ export const BookItem = ({ book, updateUserBook }) => {
           <img className={cl.cover} src={book.thumbnail} alt="" />
         </div>
         <div className={cl.description}>
-          <h3>{book.title}</h3>
-          <h3 style={{ fontWeight: 'normal' }}>{book.authors}</h3>
+          <h4>{book.title}</h4>
+          <h4 style={{ fontWeight: 'normal' }}>{book.authors}</h4>
           <p className={cl.max_lines}>{book.description}</p>
         </div>
       </div>

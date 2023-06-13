@@ -4,10 +4,14 @@
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
-h3 {
+.description {
+  margin-left: 10px;
+  line-height: 1.8em;
+  padding-top: 10px;
+}
+
+.description h4 {
   margin: 0;
-  padding-left: 10px;
-  line-height: 40px;
 }
 
 .max_lines {
@@ -17,8 +21,6 @@ h3 {
   line-clamp: 3;
   word-break: break-word;
   -webkit-box-orient: vertical;
-  line-height: 1.8em;
-  margin: 10px;
 }
 
 .icons {

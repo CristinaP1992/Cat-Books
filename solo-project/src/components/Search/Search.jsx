@@ -25,7 +25,7 @@ export const Search = () => {
             required
             onChange={(e) => setTitle(e.target.value)}
           />
-          <button>Go</button>
+          <button className={cl.search_button}>Go</button>
         </form>
         <BookList books={books} updateUserBook={updateUserBook} />
       </div>

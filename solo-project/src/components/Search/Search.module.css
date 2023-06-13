@@ -33,7 +33,7 @@ form:focus-within {
   outline: 2px solid #f7a76c;
 }
 
-.container button {
+.search_button {
   border: 2px solid #f7a76c;
   background: #f7a76c;
   border-radius: 2px;
