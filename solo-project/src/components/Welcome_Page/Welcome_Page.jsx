@@ -5,9 +5,9 @@ export const Welcome_Page = () => {
     <div className={cl.welcome_page}>
       <div className={cl.moto}>
         <h2>
-          <span style={{ color: 'green' }}>Read.</span>{' '}
-          <span style={{ color: '#f7a76c' }}>Plan.</span>
-          <span style={{ color: '#FF8FB1' }}> Enjoy</span>
+          <span id={cl.green_color}>Read.</span>{' '}
+          <span id={cl.orange_color}>Plan.</span>
+          <span className={cl.pink_color}> Enjoy</span>
         </h2>
       </div>
       <div className={cl.image}>
@@ -15,7 +15,7 @@ export const Welcome_Page = () => {
       </div>
       <div className={cl.greeting}>
         <h2>
-          Welcome back, <span style={{ color: '#FF8FB1' }}>Kissa</span>{' '}
+          Welcome back, <span className={cl.pink_color}>Kissa</span>{' '}
         </h2>
       </div>
     </div>

@@ -18,7 +18,7 @@ export const BookItem = ({ book, updateUserBook }) => {
         </div>
         <div className={cl.description}>
           <h4>{book.title}</h4>
-          <h4 style={{ fontWeight: 'normal' }}>{book.authors}</h4>
+          <h4 className={cl.author}>{book.authors}</h4>
           <p className={cl.max_lines}>{book.description}</p>
         </div>
       </div>

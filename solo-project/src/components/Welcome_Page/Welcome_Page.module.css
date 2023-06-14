@@ -1,3 +1,10 @@
+:root {
+  --beige: #faebd7;
+  --green: green;
+  --orange: #f7a76c;
+  --pink: #ff8fb1;
+}
+
 .welcome_page {
   display: flex;
   position: fixed;
@@ -7,7 +14,7 @@
   height: 100vh;
   padding-bottom: 90px;
   z-index: -1;
-  background-color: antiquewhite;
+  background-color: var(--beige);
 }
 
 .moto {
@@ -27,6 +34,18 @@
   border-radius: 15px;
 }
 
-.greeting {
-  color: green;
+.greeting h2 {
+  color: var(--green);
+}
+
+#green_color {
+  color: var(--green);
+}
+
+#orange_color {
+  color: var(--orange);
+}
+
+.pink_color {
+  color: var(--pink);
 }

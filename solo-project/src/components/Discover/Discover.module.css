@@ -1,3 +1,7 @@
+:root {
+  --beige: #f7a76c;
+}
+
 .category {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -7,18 +11,18 @@
 
 .item {
   width: 100px;
-  border: 1px solid #f7a76c;
+  border: 1px solid var(--beige);
   text-decoration: none;
   border-radius: 20px;
   text-align: center;
   font-size: 18px;
   font-weight: 500;
-  color: #f7a76c;
+  color: var(--beige);
   padding: 10px;
   margin: 2px;
 }
 
 .item.active {
   color: black;
-  background-color: #f7a76c;
+  background-color: var(--beige);
 }

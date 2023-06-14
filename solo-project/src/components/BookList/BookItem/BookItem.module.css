@@ -31,6 +31,10 @@
   width: 128px;
 }
 
+.author {
+  font-weight: normal;
+}
+
 .buttons {
   width: 100%;
   display: flex;
