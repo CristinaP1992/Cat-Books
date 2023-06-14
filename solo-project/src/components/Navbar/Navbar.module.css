@@ -4,7 +4,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #f7a76c;
+  background-color: var(--orange);
   justify-content: space-around;
   padding: 20px 0px;
   z-index: 1;

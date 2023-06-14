@@ -1,5 +1,5 @@
 .profile_info .background {
-  background-color: antiquewhite;
+  background-color: var(--beige);
   position: fixed;
   width: 100vw;
   height: 100vh;

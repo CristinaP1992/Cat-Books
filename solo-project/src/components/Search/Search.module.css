@@ -1,7 +1,3 @@
-:root {
-  --beige: #f7a76c;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -13,7 +9,7 @@ form {
   /* This bit sets up the horizontal layout */
   display: flex;
   flex-direction: row;
-  border: 2px solid var(--beige);
+  border: 2px solid var(--orange);
   margin-bottom: 40px;
   border-radius: 5px;
 }
@@ -34,12 +30,12 @@ input:focus {
 }
 
 form:focus-within {
-  outline: 2px solid var(--beige);
+  outline: 2px solid var(--orange);
 }
 
 .search_button {
-  border: 2px solid var(--beige);
-  background: var(--beige);
+  border: 2px solid var(--orange);
+  background: var(--orange);
   border-radius: 2px;
   width: 100px;
   color: black;

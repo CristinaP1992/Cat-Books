@@ -9,3 +9,10 @@ body {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --beige: #faebd7;
+  --green: green;
+  --orange: #f7a76c;
+  --pink: #ff8fb1;
+}

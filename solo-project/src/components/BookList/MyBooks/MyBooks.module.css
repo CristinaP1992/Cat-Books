@@ -20,7 +20,7 @@ details summary::-webkit-details-marker {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: blanchedalmond;
+  background-color: var(--beige);
   border-radius: 10px;
   margin: 0 auto;
   margin-top: 20px;

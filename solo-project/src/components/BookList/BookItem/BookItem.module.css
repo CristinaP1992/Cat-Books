@@ -50,7 +50,7 @@
   align-items: center;
   justify-content: center;
   font-size: 16px;
-  background-color: blanchedalmond;
+  background-color: var(--beige);
   border: none;
   border-radius: 10px;
 }
@@ -62,7 +62,7 @@
 }
 
 .button.active {
-  background-color: #f7a76c;
+  background-color: var(--orange);
 }
 
 .top {

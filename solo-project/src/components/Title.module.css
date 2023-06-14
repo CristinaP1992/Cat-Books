@@ -1,5 +1,5 @@
 .title {
-  background-color: #f7a76c;
+  background-color: var(--orange);
   width: 100%;
   position: fixed;
   top: 0;
