@@ -1,5 +1,9 @@
 **Cat&Books**
 
+![screen](<./plan_picture/Screenshot%20(118).png>)
+![screen](<./plan_picture/Screenshot%20(119).png>)
+![screen](<./plan_picture/Screenshot%20(120).png>)
+
 This app is designed for book lovers. Plan and enjoy your reading!
 
 _Getting started_
